@@ -1,7 +1,5 @@
 # LearnWebDev
 学习前端开发的仓库
- 
-争取短期内通过学习[百度前端技术学院](http://ife.baidu.com/)的零基础课程达到前端开发的入门水平！
 
 ## 入门资料
 [Come on Baby! 你也可以成为Web开发工程师！——Web开发工程师完全成长指南](https://zhuanlan.zhihu.com/p/22978846)
