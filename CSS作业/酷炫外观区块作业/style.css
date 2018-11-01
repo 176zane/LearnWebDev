@@ -1,0 +1,24 @@
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+p {
+    width: 200px;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    background-color: blue;
+    color: blue;
+    text-shadow: 2px 2px 1px black;
+    line-height: 3;
+    border-radius: 5px;
+    border:1px solid black;
+
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0), rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.2));
+
+    box-shadow: inset 2px 2px 3px rgba(255,255,255,0.6),
+                inset -2px -2px 3px rgba(0,0,0,0.6),
+                2px 2px 5px black;
+
+}
