@@ -34,7 +34,7 @@ class Board extends React.Component {
 
   render() {
     //render 返回的是一个 React 元素,通常使用 JSX 这种语法扩展来书写这种描述。
-    //我们在 JSX 元素的最外层套上一个小括号，以防止 JS 代码解析时自动在换行处添加分号。
+    //我们在 JSX 声明的 React 元素的最外层套上一个小括号，以防止 JS 代码解析时自动在换行处添加分号。
     return (
       <div>
         <div className="board-row">

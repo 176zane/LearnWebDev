@@ -10,6 +10,8 @@
 
 [前端学习路径](https://zhuanlan.zhihu.com/p/21935921)
 
+[前端九部 - 入门者手册2019](https://www.yuque.com/fe9/basic)
+
 ## React
 [重新介绍 JavaScript（JS 教程）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 
