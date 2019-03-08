@@ -8,9 +8,9 @@ var cookieParser = require('cookie-parser');
 //node 专用 HTTP 请求记录器中间件
 var logger = require('morgan');
 //require用户路由目录中的模块
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const catalogRouter = require('./routes/catalog');  // 导入 catalog 路由
 var app = express();
 
 // 设置 Mongoose 连接
@@ -38,6 +38,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 //把（之前导入的）路由处理器添加到请求处理链中。从而为网站的不同部分定义具体的路由
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链
+
+const wiki = require('./wiki.js');
+app.use('/wiki', wiki);
 
 // catch 404 and forward to error handler
 // 捕获 404 并抛给错误处理器
