@@ -11,6 +11,7 @@ var logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const catalogRouter = require('./routes/catalog');  // 导入 catalog 路由
+
 var app = express();
 
 // 设置 Mongoose 连接

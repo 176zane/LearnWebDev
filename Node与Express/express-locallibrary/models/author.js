@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+var moment = require('moment');
 
 const Schema = mongoose.Schema;
 
@@ -22,7 +23,12 @@ AuthorSchema
 AuthorSchema
   .virtual('lifespan')
   .get(function () {
-    return (this.date_of_death.getYear() - this.date_of_birth.getYear()).toString();
+    if(!this.date_of_birth||!this.date_of_death) {
+      return '';  
+    }else{
+      return (this.date_of_death.getYear() - this.date_of_birth.getYear()).toString();
+    }
+    
   });
 
 // 虚拟属性'url'：作者 URL
@@ -30,6 +36,18 @@ AuthorSchema
   .virtual('url')
   .get(function () {
     return '/catalog/author/' + this._id;
+  });
+
+AuthorSchema
+  .virtual('date_of_birth_formatted')
+  .get(function () {
+    return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';
+  });
+
+AuthorSchema
+  .virtual('date_of_death_formatted')
+  .get(function () {
+    return this.date_of_death ? moment(this.date_of_death).format('YYYY-MM-DD') : '';
   });
 
 // 导出 Author 模型

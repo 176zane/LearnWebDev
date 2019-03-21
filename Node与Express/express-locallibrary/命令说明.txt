@@ -1,0 +1,4 @@
+//开启mongodb的命令
+mongod --dbpath=/Users/Zane/Documents/SourceCode/LearnWebDev/Node与Express/express-locallibrary/data 
+//开启服务器命令
+DEBUG=express-locallibrary:* npm run devstart
